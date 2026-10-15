@@ -1,5 +1,7 @@
 # CampusWater
 
+**中文** | [English](README.en.md)
+
 校园水控设备的第三方安卓客户端。用蓝牙连接水控设备开阀/关阀，走「趣智校园」的服务端做登录、计费与结算，
 并在此基础上重写了整套界面（Jetpack Compose + Miuix + 液态玻璃）。
 
@@ -111,7 +113,7 @@ SPDX 标识：`GPL-3.0-or-later`。
 | 组件 | 许可证 |
 | --- | --- |
 | [Kyant0/AndroidLiquidGlass](https://github.com/Kyant0/AndroidLiquidGlass)（backdrop、shapes） | Apache-2.0 |
-| [Miuix](https://github.com/MiUix-Compose/Compose-Miuix) | Apache-2.0 |
+| [Miuix](https://github.com/compose-miuix-ui/miuix) | Apache-2.0 |
 | Jetpack / JetBrains Compose、Material Color Utilities | Apache-2.0 |
 | 支付宝应用支付 SDK | 支付宝官方发布，见支付宝开放平台 |
 
