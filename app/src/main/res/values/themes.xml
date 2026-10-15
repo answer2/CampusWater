@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+      界面全部改由 Compose + Miuix 绘制，这里只保留一个 DayNight 的空动作栏主题：
+      作用是启动时的窗口背景色跟随深浅色，避免闪一下白屏。
+      Miuix 的配色由 ui/AppTheme 里的 ThemeController 决定，不看这里的 color* 属性。
+    -->
+    <style name="Theme.Campuswater" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="p">shortEdges</item>
+    </style>
+</resources>

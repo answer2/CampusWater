@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  自适应图标前景层：玻璃质感水滴。
+
+  造型是 Material 的 water_drop 按 x3 放大后居中到 108 画布
+  （x' = 18 + 3x, y' = 18 + 3y），整体落在安全圆内。
+
+  立体感靠三层叠出来（VectorDrawable 没有模糊滤镜，所以不能用阴影）：
+    1. 主体填充：上纯白 → 下浅蓝的竖向渐变，像一颗玻璃珠
+    2. 边缘描边：半透明白色细描边，模拟玻璃的轮廓反光
+    3. 两处高光：左上主高光 + 右下小反光
+
+  纯色剪影版本另见 ic_launcher_monochrome.xml（主题图标用那个）。
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- 主体：竖向渐变 -->
+    <path android:pathData="M54,24 C54,24 34.5,48.6 34.5,62.4 C34.5,73.2 43.2,81.9 54,81.9 C64.8,81.9 73.5,73.2 73.5,62.4 C73.5,48.6 54,24 54,24 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="54"
+                android:startY="24"
+                android:endX="54"
+                android:endY="82">
+                <item android:offset="0" android:color="#FFFFFFFF" />
+                <item android:offset="0.62" android:color="#FFF1F8FF" />
+                <item android:offset="1" android:color="#FFBEDCF8" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- 玻璃轮廓反光 -->
+    <path
+        android:pathData="M54,24 C54,24 34.5,48.6 34.5,62.4 C34.5,73.2 43.2,81.9 54,81.9 C64.8,81.9 73.5,73.2 73.5,62.4 C73.5,48.6 54,24 54,24 Z"
+        android:fillColor="#00000000"
+        android:strokeColor="#59FFFFFF"
+        android:strokeWidth="1.4" />
+
+    <!-- 主高光（左上） -->
+    <path
+        android:pathData="M45.4,51 a3.6,5 0 1,0 7.2,0 a3.6,5 0 1,0 -7.2,0 Z"
+        android:fillColor="#E6FFFFFF" />
+
+    <!-- 次反光（右下） -->
+    <path
+        android:pathData="M52,64.5 a1.5,2 0 1,0 3,0 a1.5,2 0 1,0 -3,0 Z"
+        android:fillColor="#73FFFFFF" />
+</vector>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Android 13+ 主题图标（themed icon）用的单色图层。
+
+  系统只取这个图形的 alpha 当遮罩再染色，所以必须是纯实心剪影，
+  不能有渐变、描边或半透明高光——否则会被当成"洞"。
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M54,24 C54,24 34.5,48.6 34.5,62.4 C34.5,73.2 43.2,81.9 54,81.9 C64.8,81.9 73.5,73.2 73.5,62.4 C73.5,48.6 54,24 54,24 Z" />
+</vector>

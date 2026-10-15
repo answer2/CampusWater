@@ -1,0 +1,24 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+.kotlin
+
+# IDE 状态整个都不进库（默认的几条只挡了部分文件）
+/.idea
+
+# 迁移到 Compose 之前归档的旧 Java/View 界面，不参与编译。
+# 里面是从官方小程序产物整理出来的东西，不适合放进公开仓库；
+# 确实要发布就把这一行删掉。
+/.backup-views

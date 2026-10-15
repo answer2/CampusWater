@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  自适应图标背景层。
+
+  设计：深蓝对角渐变打底 → 顶部加一层柔光（做出光源方向）→ 底部两圈水波纹
+  （圆心压到 y=100，顶端弧线正好被前景水滴盖住，只在两侧露出来）。
+
+  画布 108x108，安全区是居中的 72x72（18..90）。背景可以溢出安全区，启动器会裁。
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- 底色：对角渐变，左上偏亮、右下压暗 -->
+    <path android:pathData="M0,0h108v108h-108z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="0"
+                android:startY="0"
+                android:endX="108"
+                android:endY="108">
+                <item android:offset="0" android:color="#FF2E86DB" />
+                <item android:offset="0.52" android:color="#FF1360AF" />
+                <item android:offset="1" android:color="#FF05264B" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- 顶部柔光：让画面有明确的光源方向 -->
+    <path android:pathData="M0,0h108v108h-108z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="54"
+                android:startY="0"
+                android:endX="54"
+                android:endY="72">
+                <item android:offset="0" android:color="#4DFFFFFF" />
+                <item android:offset="0.55" android:color="#14FFFFFF" />
+                <item android:offset="1" android:color="#00FFFFFF" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- 水波纹：两圈同心圆，圆心在 (54,100)，顶端弧线藏在水滴后面 -->
+    <path
+        android:pathData="M54,100 m-34,0 a34,34 0 1,0 68,0 a34,34 0 1,0 -68,0"
+        android:fillColor="#00000000"
+        android:strokeColor="#33FFFFFF"
+        android:strokeWidth="1.6" />
+    <path
+        android:pathData="M54,100 m-48,0 a48,48 0 1,0 96,0 a48,48 0 1,0 -96,0"
+        android:fillColor="#00000000"
+        android:strokeColor="#1FFFFFFF"
+        android:strokeWidth="1.2" />
+</vector>

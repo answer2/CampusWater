@@ -1,0 +1,7 @@
+<resources>
+    <!--
+      界面文字全部写在 Compose 代码里（只有中文一种语言，且大量文案需要拼接变量）。
+      这里只保留桌面图标要用的应用名。
+    -->
+    <string name="app_name">校园用水</string>
+</resources>
